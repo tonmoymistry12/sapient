@@ -1,0 +1,43 @@
+$cSpXblue:#294884 ;
+
+.card-content{
+padding: 15px;
+
+}
+.mission-details-card{
+  margin-bottom: 15px;
+}
+
+.img-wrap{
+  background: #eee;
+  text-align: center;
+img{
+  width: 75%;
+}
+}
+ ul{
+   padding: 0;
+   li{
+     margin: 0 27px;
+   }
+ }
+
+ .mission-name{
+   margin: 10px 0;
+   span{
+   color:$cSpXblue;
+   font-weight: 600;
+   }
+ }
+
+ .mission-prop{
+   color:#000;
+   font-weight: 600;
+ }
+ .mission-prop-value{
+    color:$cSpXblue;
+   }
+
+ .spc-frm-btm{
+   margin-bottom: 10px;
+ }

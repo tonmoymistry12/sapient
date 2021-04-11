@@ -1,1 +1,37 @@
-<p>filters works!</p>
+<mat-card>
+  <h2>Filters</h2>
+  <section>
+    <div class="title-block"><span class="title-text">Launch Year</span></div>
+    <div class="row">
+      <div class="col-sm-6 margin-btm" *ngFor="let year of yearList">
+        <span class="btn-texture">{{ year }}</span>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="title-block">
+      <span class="title-text">Successful Launch</span>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 margin-btm">
+        <span class="btn-texture">Yes</span>
+      </div>
+      <div class="col-sm-6 margin-btm">
+        <span class="btn-texture">No</span>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="title-block">
+      <span class="title-text">Successful Landing</span>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 margin-btm">
+        <span class="btn-texture">Yes</span>
+      </div>
+      <div class="col-sm-6 margin-btm">
+        <span class="btn-texture">No</span>
+      </div>
+    </div>
+  </section>
+</mat-card>

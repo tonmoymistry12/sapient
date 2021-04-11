@@ -1,1 +1,36 @@
-<p>mission-details works!</p>
+<div class="wrapper">
+  <div class="row">
+    <div
+      class="mission-details-card col-sm-3 pr-0"
+      *ngFor="let item of missionList"
+    >
+      <mat-card class="card-content">
+        <div class="img-wrap">
+          <img [src]="item.imageUrl" alt="" />
+        </div>
+        <div class="mission-name">
+          <span>{{ item.missionName }} {{ item.flightNumber }}</span>
+        </div>
+
+        <ul>
+          <span class="mission-prop">Mission Ids:</span>
+          <li *ngFor="let id of item.missionId" class="mission-prop-value">
+            {{ id }}
+          </li>
+        </ul>
+        <div class="spc-frm-btm">
+          <span class="mission-prop">Launch Year: </span
+          ><span class="mission-prop-value">{{ item.launchYear }}</span>
+        </div>
+        <div class="spc-frm-btm">
+          <span class="mission-prop">Successful Launch: </span
+          ><span class="mission-prop-value">{{ item.launchStatus }}</span>
+        </div>
+        <div class="spc-frm-btm">
+          <span class="mission-prop">Successful Landing: </span
+          ><span class="mission-prop-value">{{ item.landingStatus }}</span>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.margin-btm{
+  margin-bottom: 15px;
+}
+.title-block{
+ display: flex;
+ justify-content: center;
+ margin-bottom: 10px;
+}
+.title-text{
+  display: inline-block;
+  padding: 5px 20px;
+  border-bottom: 1px solid #cecece;
+}
+
+.btn-texture{
+ background: #c6e09b;
+ border-radius: 5px;
+ color: #000;
+ display: inline-block;
+ padding: 5px 20px;
+ cursor:pointer
+}
+
+.btn-texture:active{
+  background: #7cba01;
+
+}
