@@ -1,0 +1,50 @@
+.loaderImage {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  height: 100vh;
+  z-index: 9999;
+  text-align: center;
+  img {
+    // position: absolute;
+    // top: 42%;
+    transform: translateY(68%);
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 742px) {
+  .loaderImage {
+    top: 50px;
+    width: 100%;
+    left: 0;
+  }
+}
+/* iPads  */
+@media only screen and (min-device-width: 743px) and (max-device-width: 949px) {
+  .loaderImage {
+    top: 50px;
+    width: 100%;
+    left: 0;
+  }
+}
+/* Medium size screen */
+@media only screen and (min-device-width: 950px) and (max-device-width: 1024px) {
+  .loaderImage {
+    position: fixed;
+    top: 64px;
+    width: 100%;
+    left: 0;
+  }
+}
+/* Large screen */
+@media only screen and (min-device-width: 1900px) {
+  .loaderImage {
+    position: fixed;
+    top: 64px;
+    width: calc(100% - 260px);
+    left: 260px;
+  }
+}

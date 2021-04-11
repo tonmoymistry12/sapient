@@ -41,3 +41,18 @@ img{
  .spc-frm-btm{
    margin-bottom: 10px;
  }
+.no-data-block{
+  width: 100%;
+  text-align: center;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 700px) {
+.add-padding{
+padding: 0 15px  !important;
+}
+}
+/* iPads  */
+@media only screen and (min-device-width: 701px) and (max-device-width: 1024px) {
+
+}

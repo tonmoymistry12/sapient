@@ -21,7 +21,22 @@
  cursor:pointer
 }
 
-.btn-texture:active{
+.active{
   background: #7cba01;
+
+}
+.add-cent{
+  display: flex;
+  justify-content: center;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 700px) {
+.no-padding{
+padding: 0;
+}
+
+}
+/* iPads  */
+@media only screen and (min-device-width: 701px) and (max-device-width: 1024px) {
 
 }

@@ -1,12 +1,12 @@
 <div class="wrapper">
   <div class="row">
     <div
-      class="mission-details-card col-sm-3 pr-0"
+      class="mission-details-card col-xs-12 col-sm-6 col-md-6 col-lg-3 pr-0 add-padding"
       *ngFor="let item of missionList"
     >
       <mat-card class="card-content">
         <div class="img-wrap">
-          <img [src]="item.imageUrl" alt="" />
+          <img [src]="item.imageUrl" [alt]="item.missionName" />
         </div>
         <div class="mission-name">
           <span>{{ item.missionName }} {{ item.flightNumber }}</span>
@@ -31,6 +31,9 @@
           ><span class="mission-prop-value">{{ item.landingStatus }}</span>
         </div>
       </mat-card>
+    </div>
+    <div class="no-data-block" *ngIf="!missionList.length">
+      <h2>No Mission Record</h2>
     </div>
   </div>
 </div>

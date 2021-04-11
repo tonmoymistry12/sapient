@@ -11,6 +11,8 @@ import { FooterComponent } from './views/footer/footer.component';
 import { HeaderComponent } from './views/header/header.component';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { LoaderComponent } from './views/loader/loader.component';
+import { httpInterceptProviders } from 'src/util/httpInterceptProviders';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FooterComponent,
     HeaderComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppMaterialModule,
   ],
-  providers: [],
+  providers: [httpInterceptProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -4,3 +4,17 @@
   width: 100%;
   background: #eee;
 }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 700px) {
+.no-padding{
+padding: 0;
+}
+.left-menu{
+  margin-bottom: 15px;
+}
+
+}
+/* iPads  */
+@media only screen and (min-device-width: 701px) and (max-device-width: 1024px) {
+
+}

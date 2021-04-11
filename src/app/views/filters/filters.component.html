@@ -3,8 +3,16 @@
   <section>
     <div class="title-block"><span class="title-text">Launch Year</span></div>
     <div class="row">
-      <div class="col-sm-6 margin-btm" *ngFor="let year of yearList">
-        <span class="btn-texture">{{ year }}</span>
+      <div
+        class="col-6 margin-btm add-cent"
+        *ngFor="let year of yearList; let i = index"
+      >
+        <span
+          class="btn-texture"
+          [class.active]="selectedIndex === i"
+          (click)="applyFilterForYear(year, i)"
+          >{{ year }}</span
+        >
       </div>
     </div>
   </section>
@@ -13,11 +21,21 @@
       <span class="title-text">Successful Launch</span>
     </div>
     <div class="row">
-      <div class="col-sm-6 margin-btm">
-        <span class="btn-texture">True</span>
+      <div class="col-6 margin-btm add-cent">
+        <span
+          class="btn-texture"
+          [class.active]="islaunchTrue"
+          (click)="applyFilterForLaunch(true)"
+          >True</span
+        >
       </div>
-      <div class="col-sm-6 margin-btm">
-        <span class="btn-texture">False</span>
+      <div class="col-6 margin-btm add-cent">
+        <span
+          class="btn-texture"
+          [class.active]="isLaunchFalse"
+          (click)="applyFilterForLaunch(false)"
+          >False</span
+        >
       </div>
     </div>
   </section>
@@ -26,11 +44,21 @@
       <span class="title-text">Successful Landing</span>
     </div>
     <div class="row">
-      <div class="col-sm-6 margin-btm">
-        <span class="btn-texture">True</span>
+      <div class="col-6 margin-btm add-cent">
+        <span
+          class="btn-texture"
+          [class.active]="islandTrue"
+          (click)="applyFilterForLand(true)"
+          >True</span
+        >
       </div>
-      <div class="col-sm-6 margin-btm">
-        <span class="btn-texture">False</span>
+      <div class="col-6 margin-btm add-cent">
+        <span
+          class="btn-texture"
+          [class.active]="isLandFalse"
+          (click)="applyFilterForLand(false)"
+          >False</span
+        >
       </div>
     </div>
   </section>

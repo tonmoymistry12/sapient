@@ -10,6 +10,27 @@ export class MissionDetailsComponent implements OnInit {
   constructor(private missionService: MissionDetailsService) {}
   missionList: Array<missionDetails> = [];
   ngOnInit(): void {
+    this.missionService.getFilterdDetails().subscribe((response) => {
+      if (response) {
+        this.missionList = [];
+        response.forEach((item) => {
+          this.missionList.push({
+            missionName: item.mission_name,
+            missionId: item.mission_id.length
+              ? item.mission_id
+              : ['Not Available'],
+            launchYear: item.launch_year,
+            launchStatus: item.launch_success,
+            landingStatus: item.launch_landing ?? 'Not Available',
+            imageUrl: item.links.mission_patch_small,
+            flightNumber: '#' + item.flight_number,
+          });
+        });
+      }
+
+      console.log('filterd');
+      console.log(this.missionList);
+    });
     this.setAllMissionDetails();
   }
   setAllMissionDetails() {
